@@ -1,0 +1,178 @@
+.product {
+  height: 100vh;
+  margin-top: 140px;
+  margin-bottom: 160px;
+
+  @include media("<md") {
+    height: 100%;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .row {
+    @include media("<md") {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &-middle {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background: rgba($golden, .7);
+
+    .product {
+      &-wrap {
+        max-width: 566px;
+        height: 100vh;
+
+        @include media("<md") {
+          height: 100%;
+          padding-top: 80px;
+          padding-bottom: 430px;
+        }
+      }
+
+      &-banner {
+        width: 50%;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+
+        @include media("<md") {
+          width: 100%;
+          height: 390px;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  &-no_img {
+    height: 100%;
+    text-align: center;
+
+    .product {
+      &-wrap {
+        height: 100%;
+      }
+    }
+
+    .button {
+      margin-top: 50px !important;
+    }
+
+    .link-main {
+      margin-top: 15px;
+    }
+  }
+
+  &-wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include media("<md") {
+      margin-bottom: 46px;
+    }
+  }
+
+  &-banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    @include media("<md"){
+      height: 430px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .title {
+    margin-bottom: 20px;
+
+    @include media("<md") {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  .text-main {
+    margin-bottom: 40px;
+
+    @include media("<md") {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  .link-main {
+    @include media("<md") {
+      text-align: center;
+    }
+  }
+
+  .button {
+    margin-top: 20px;
+
+    @include media("<md") {
+      text-align: center;
+    }
+  }
+
+  &_two_col {
+    position: relative;
+
+    &-wrap {
+      display: flex;
+      flex-direction: row;
+
+      @include media("<md") {
+        flex-direction: column;
+      }
+    }
+
+    &-banner {
+      height: calc(100vh - 120px);
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &-cont {
+      max-width: 380px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 33px 25px 25px;
+      position: absolute;
+      bottom: 90px;
+      left: 0;
+      right: 0;
+      background: $white;
+      border-radius: 15px;
+      text-align: center;
+
+      @include media("<md") {
+        margin-left: 25px;
+        margin-right: 25px;
+      }
+    }
+
+    .title {
+      font-size: 30px;
+      line-height: 38px;
+      font-weight: 200;
+      text-transform: uppercase;
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+  }
+}

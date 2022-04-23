@@ -1,0 +1,97 @@
+@mixin fontWalsh($name, $nameWeight, $weight) {
+  @font-face {
+      font-family: #{$name};
+      src: url("../../fonts/#{$name}/#{$name}-#{$nameWeight}.ttf") format("TrueType");
+      font-weight: $weight;
+      font-display: fallback;
+  }
+}
+
+$fontMulish: 'Mulish';
+$fontAudrey: 'Audrey';
+
+@include fontWalsh($fontMulish, 'Bold', 700);
+@include fontWalsh($fontMulish, 'Regular', 400);
+@include fontWalsh($fontMulish, 'Light', 300);
+@include fontWalsh($fontMulish, 'ExtraLight', 200);
+
+@font-face {
+  font-family: 'Audrey';
+  src: url("../../fonts/Audrey/Audrey-Normal.otf") format("OpenType");
+  font-weight: 400;
+  font-display: fallback;
+}
+
+.article-level {
+  &-1 {
+    font-size: 72px;
+    line-height: 86.4px;
+    font-weight: 400;
+    color: $black;
+    font-family: $fontAudrey;
+
+    @include media ("<md") {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &-2 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 400;
+    color: $black;
+    font-family: $fontAudrey;
+    text-transform: uppercase;
+
+    @include media ("<md") {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  &-3 {
+    font-size: 30px;
+    line-height: 37.65px;
+    font-weight: 200;
+    color: $black;
+    font-family: $fontMulish;
+    text-transform: uppercase;
+
+    @include media ("<md") {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &-4 {
+    font-size: 25px;
+    line-height: 31.38px;
+    font-weight: 300;
+    color: $black;
+    font-family: $fontMulish;
+
+    @include media ("<md") {
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+}
+
+.text {
+  &-main {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    color: $black;
+    font-family: $fontMulish;
+  }
+
+  &-addit {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $meadow;
+    font-family: $fontMulish;
+  }
+}

@@ -1,0 +1,22 @@
+.head-alert {
+  width: 100%;
+  padding-bottom: 3px;
+  text-align: center;
+  background: $meadow;
+
+  @include media("<md") {
+    padding-bottom: 2px;
+  }
+
+  .cont {
+    font-size: 18px;
+    line-height: 22.6px;
+    font-weight: 600;
+    color: $white;
+
+    @include media ("<md") {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+}

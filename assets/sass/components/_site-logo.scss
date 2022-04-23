@@ -1,0 +1,24 @@
+.site-logo {
+  max-width: 213px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-size: 34px;
+  line-height: 30px;
+  font-family: $fontAudrey;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $black;
+  }
+
+  @include media ("<md") {
+    width: 111px;
+    height: 37px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}

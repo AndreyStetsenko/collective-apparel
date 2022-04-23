@@ -1,0 +1,35 @@
+.modal {
+  &-backdrop {
+    &.show {
+      opacity: 0;
+    }
+  }
+
+  &-green {
+    .modal-content {
+      background: #BBE6DB;
+    }
+  }
+
+  &-content {
+    padding: 80px 90px 70px;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: -1px 10px 40px rgba(#000, .1);
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      .form-group {
+        margin-bottom: 32px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

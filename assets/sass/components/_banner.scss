@@ -1,0 +1,118 @@
+.banner {
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include media("<md") {
+    margin-top: 120px;
+  }
+
+  &-wrap {
+    height: calc(100vh - 177px);
+
+    @include media("<md") {
+      height: 220px;
+    }
+  }
+
+  .play {
+    width: 144px;
+    height: 144px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    background: rgba(#000, .34);
+    transition: .2s ease-in-out;
+    cursor: pointer;
+
+    @include media("<md") {
+      width: 48px;
+      height: 48px;
+    }
+
+    &:hover {
+      background: rgba(#000, .7);
+    }
+
+    &:after {
+      content: '';
+      width: 78px;
+      height: 78px;
+      margin: auto;
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 25px;
+      right: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjkiIGhlaWdodD0iNzgiIHZpZXdCb3g9IjAgMCA2OSA3OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTY2LjUgMzQuNjY5OUM2OS44MzMzIDM2LjU5NDQgNjkuODMzMyA0MS40MDU2IDY2LjUgNDMuMzMwMUw4IDc3LjEwNTFDNC42NjY2NiA3OS4wMjk2IDAuNTAwMDA0IDc2LjYyNCAwLjUwMDAwNCA3Mi43NzVMMC41MDAwMDcgNS4yMjVDMC41MDAwMDcgMS4zNzYgNC42NjY2NyAtMS4wMjk2MiA4LjAwMDAxIDAuODk0ODhMNjYuNSAzNC42Njk5WiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC44NSIvPgo8L3N2Zz4K');
+
+      @include media("<md") {
+        width: 28px;
+        height: 28px;
+        left: 10px;
+      }
+    }
+  }
+
+  .title {
+    &-1 {
+      display: block;
+      position: absolute;
+      top: 53px;
+      left: 0;
+      right: 0;
+      color: $white;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include media("<md") {
+        top: -80px;
+        color: $black;
+      }
+    }
+  }
+
+  &-photo {
+    .title-1 {
+      top: 100px;
+      text-align: start;
+
+      @include media("<md") {
+        top: -110px;
+        color: $black;
+        text-align: center;
+      }
+    }
+
+    .banner {
+      &-wrap {
+        position: relative;
+      }
+
+      &-foot {
+        position: absolute;
+        bottom: 10vh;
+
+        @include media("<md") {
+          display: none;
+        }
+
+        .link-main {
+          margin-top: 15px;
+          margin-left: 32px;
+          display: block;
+          color: $white;
+        }
+      }
+    }
+  }
+}
