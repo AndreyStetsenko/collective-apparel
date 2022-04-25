@@ -1,6 +1,7 @@
 .products-grid {
   &.style-1 {
     .item {
+      height: calc(100% - 30px);
       padding: 55px 25px;
       margin-bottom: 30px;
       display: flex;
